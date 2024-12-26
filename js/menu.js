@@ -3,6 +3,7 @@ let btnmenu = document.getElementById("menu-btn");
 let menumobile = document.getElementById("menu-mobile");
 let overlay = document.getElementById("menu-overlay");
 let botaofechar = document.querySelector(".btn-fechar");
+let listmobile = document.getElementById("menu-mobile-list");
 
 botaofechar.addEventListener("click", () => {
   menumobile.classList.remove("abrir-menu-mobile");
@@ -14,9 +15,32 @@ btnmenu.addEventListener("click", () => {
   overlay.classList.add("abrir-menu-mobile");
 });
 
+menumobile.addEventListener("click", () => {
+  menumobile.classList.remove("abrir-menu-mobile");
+  overlay.classList.remove("abrir-menu-mobile");
+});
+
 overlay.addEventListener("click", () => {
   menumobile.classList.remove("abrir-menu-mobile");
   overlay.classList.remove("abrir-menu-mobile");
+});
+
+// Interação Menu Sociais
+let btnsociaisabrir = document.getElementById("abrir-sociais");
+let menusociais = document.getElementById("menu-sociais");
+let btnsociaisfechar = document.getElementById("fechar-sociais");
+
+btnsociaisabrir.addEventListener("click", () => {
+  menusociais.classList.add("abrir");
+  btnsociaisabrir.classList.add("aberto");
+});
+menusociais.addEventListener("click", () => {
+  btnsociaisabrir.classList.remove("aberto");
+  menusociais.classList.remove("abrir");
+});
+btnsociaisfechar.addEventListener("click", () => {
+  btnsociaisabrir.classList.remove("aberto");
+  menusociais.classList.remove("abrir");
 });
 
 // Interações Cards
@@ -62,6 +86,12 @@ function setupCardInteraction(
       cardimg.classList.add("abrir");
       divcard.classList.add("fechar");
       cardbtn.classList.add("rotacionar");
+
+      // Centralizar Card na tela, quando ajustar a altura da section
+      cardimg.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
     }
   });
 

@@ -82,6 +82,53 @@ span {
 .interface {
   padding: 20px 4%;
 }
+/* Menu Sociais */
+.sociais {
+  height: 0;
+}
+.abrir-sociais button {
+  background-color: #24a5f062;
+  height: 67px;
+}
+.abrir-sociais {
+  position: fixed;
+  right: -25px;
+  bottom: 120px;
+  visibility: visible;
+  opacity: 1;
+  z-index: 1000;
+  transition: 0.5s ease;
+}
+#img-abrir-sociais {
+  opacity: 0.6;
+}
+.abrir-sociais.aberto {
+  visibility: hidden;
+  opacity: 0;
+}
+.menu-sociais {
+  display: flex;
+  visibility: hidden;
+  position: fixed;
+  right: 0;
+  border-radius: 30px 0 0 30px;
+  bottom: 120px;
+  z-index: 1000;
+  background-color: #24a5f098;
+  opacity: 0;
+  z-index: 1000;
+  transition: 0.5s ease;
+}
+.menu-sociais.abrir {
+  visibility: visible;
+  opacity: 1;
+}
+#fechar-sociais {
+  background-color: #24a5f000;
+}
+#btnsociais {
+  background-color: #24a5f000;
+}
 
 /* Nav */
 nav {
@@ -272,6 +319,7 @@ button#header1 {
 main {
   background-image: linear-gradient(to bottom, white 90%, #eaf8ff);
   margin: auto;
+  height: auto;
   min-width: 320px;
   max-width: 1440px;
 }
@@ -316,10 +364,11 @@ div#main {
   width: 170px;
   height: 220px;
   padding: 40px 35px;
-  transition: max-width 0.3s ease, max-height 0.3s, transform 0.3s ease-in-out;
+  transition: display 0.3s ease, max-width 0.3s ease, max-height 0.3s,
+    transform 0.3s ease-in-out;
 }
 .main1.rotacionar {
-  position: absolute;
+  position: relative;
 
   height: 572px;
   width: 203px;
@@ -366,6 +415,7 @@ div.cards.fechar {
   z-index: 1000;
 }
 .invisible {
+  display: none;
   opacity: 0;
   pointer-events: none;
   transform: scale(0.9);
