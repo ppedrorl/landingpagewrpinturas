@@ -150,6 +150,9 @@ nav .interface {
   align-items: center;
   padding: 0;
 }
+#imglogo {
+  height: 55px;
+}
 .navbar-brand {
   display: inline-block;
   margin: 5px;
@@ -317,11 +320,13 @@ button#header1 {
 }
 /* Main */
 main {
-  background-image: linear-gradient(to bottom, white 90%, #eaf8ff);
+  background-image: linear-gradient(to bottom, #ffffff 90%, #eaf8ff);
   margin: auto;
   height: auto;
   min-width: 320px;
   max-width: 1440px;
+  padding-top: 72px;
+  position: relative;
 }
 section#main {
   display: flex;
@@ -332,6 +337,27 @@ section#main {
   align-content: center;
   justify-content: center;
   align-items: center;
+}
+.rolodepintor {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+#rolodepintura {
+  position: relative;
+  top: 45px;
+  width: 310px;
+  height: 310px;
+}
+#citacao {
+  font-size: 12px;
+  font-weight: 600;
+  color: #252b42;
+  width: 156px;
+  position: relative;
+  top: -85px;
+  right: -40px;
 }
 .section-main {
   overflow: hidden;
@@ -370,8 +396,8 @@ div#main {
 .main1.rotacionar {
   position: relative;
 
-  height: 572px;
-  width: 203px;
+  /* height: 449px;
+  width: 449px; */
   transform: rotate(90deg) scale(1.1);
 }
 div.cards {
@@ -388,8 +414,8 @@ div.cards.fechar {
 }
 .imagenscard {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 2px;
+  top: 1px;
   margin: auto;
   border: none;
   width: 0%;
@@ -421,7 +447,12 @@ div.cards.fechar {
   transform: scale(0.9);
   transition: opacity 0.3s, transform 0.3s;
 }
-
+#card1,
+#card2,
+#card3,
+#card4 {
+  transition: 0.3s ease;
+}
 #card1:hover {
   background-color: var(--corprimaria);
   color: var(--cortextoclaro);
@@ -783,7 +814,7 @@ footer {
     align-content: center;
   }
   .main1.rotacionar {
-    top: -170px;
+    top: 0;
   }
   /* Article Mobile */
   article {
