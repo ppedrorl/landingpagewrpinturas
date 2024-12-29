@@ -334,7 +334,7 @@ button#header1 {
 /* Animações */
 @keyframes rolodepintor {
   0% {
-    left: calc(-100% + 80px);
+    left: calc(-100% + 76px);
   }
   100% {
     left: 0px;
