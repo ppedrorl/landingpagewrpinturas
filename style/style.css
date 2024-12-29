@@ -318,6 +318,53 @@ p#header1 {
 button#header1 {
   margin: 10px;
 }
+
+/* Rolo de Pintor */
+.animacaorolodepintor {
+  background-image: url(../img/rolodepinturatransp-removebg-preview.png);
+  background-position: right;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  animation: rolodepintor 2s ease-in-out 5s 1 normal backwards;
+}
+/* Animações */
+@keyframes rolodepintor {
+  0% {
+    left: calc(-100% + 80px);
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+#rolodepintura {
+  width: 100%;
+  height: 120px;
+}
+.citacao {
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  top: 45px;
+  width: 100%;
+}
+.quote {
+  color: wheat;
+  font-size: 22px;
+}
+cite a {
+  color: wheat;
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+cite a:hover {
+  color: white;
+}
+
 /* Main */
 main {
   background-image: linear-gradient(to bottom, #ffffff 90%, #eaf8ff);
@@ -325,12 +372,11 @@ main {
   height: auto;
   min-width: 320px;
   max-width: 1440px;
-  padding-top: 72px;
   position: relative;
 }
 section#main {
   display: flex;
-  margin: 0 auto 28px auto;
+  margin: 100px auto 28px auto;
   max-width: 1050px;
   flex-direction: row;
   flex-wrap: wrap;
@@ -338,18 +384,7 @@ section#main {
   justify-content: center;
   align-items: center;
 }
-.rolodepintor {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 10;
-}
-#rolodepintura {
-  position: relative;
-  top: 45px;
-  width: 310px;
-  height: 310px;
-}
+
 #citacao {
   font-size: 12px;
   font-weight: 600;
@@ -772,13 +807,23 @@ footer {
   button#header1 {
     margin: 20px auto;
   }
+
   /* Main Mobile*/
   main {
     max-height: none;
   }
+  /* Animação Rolo de Pintura */
+  .citacao {
+    top: 22px;
+    width: 80%;
+  }
+  .quote {
+    font-weight: 600;
+    font-size: 18px;
+  }
   section#main {
     display: flex;
-    margin: auto;
+    margin: 100px auto auto auto;
     max-width: 1040px;
     max-height: none;
     row-gap: 28px;
