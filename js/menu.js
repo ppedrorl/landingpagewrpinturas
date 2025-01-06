@@ -128,3 +128,17 @@ allCards.forEach((card) => {
     allCards
   );
 });
+
+// Animação Rolo de Pintura
+
+document.addEventListener("DOMContentLoaded", () => {
+  const rolopintor = document.querySelectorAll("#animacaorolodepintor");
+  const observer = new IntersectionObserver ((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animado");
+      }
+    });
+  });
+  rolopintor.forEach((el) => observer.observe(el));
+});
